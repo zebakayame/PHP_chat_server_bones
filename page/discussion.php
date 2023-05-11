@@ -10,7 +10,7 @@
     <?php
         echo "helo";
 
-        echo $_POST;
+        echo $_POST[0];
 
     ?>
 </body>
