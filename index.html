@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="img/catLogo.png" type="image/x-icon">
+    <title>UwU</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <h2>Please log in your account or create a new one</h2>
+    <div class="login">
+        <form name="f1" action="page/login.php" onsubmit = "return validation()" method="post">
+            <input type="text" placeholder="User name" name="user" id="user"><br>
+            <input type="password" placeholder="Password" name="pass" id="pass"><br>
+            <button id="loginButton" type="submit">Login</button>
+        </form>
+        <button id="registerButton">Register</button>
+    </div>
+    <script>
+        function validation(){
+            var id = document.f1.user.value;
+            var ps = document.f1.pass.value;
+            if(id.length == "" && ps.length==""){
+                alert("Please enter your damn account or create one if not already");
+                return false;
+            }else{
+                if(id.length == ""){
+                    alert("YOUR USERNAME PLEASE");
+                    return false;
+                }
+                if(ps.length == ""){
+                    alert("You think you can login without password?");
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

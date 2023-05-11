@@ -46,51 +46,13 @@ body{
     color: white;
     font-family: customFont;
 }
-.login input:focus{
+.login input:focus, .login input:hover{
     animation: inputGo_Go 0.5s ease;
     background-color: #b77dd4;
     border: solid 5px #b77dd4;
 }
 
 /* Register Button */
-
-@keyframes regButtonGo_Go {
-    from{
-        background-color: #353853;
-        border: solid 5px #353853;
-    }to{
-        background-color: #b77dd4;
-        border: solid 5px #b77dd4;
-    }
-}
-@keyframes regButtonGo_Go_BACK {
-    from{
-        background-color: #b77dd4;
-        border: solid 5px #b77dd4;
-    }to{
-        background-color: #353853;
-        border: solid 5px #353853;
-    }
-}
-#registerButton{
-    animation: regButtonGo_Go_BACK 0.5s ease;
-    width: 20%;
-    height: 40px;
-    margin: 20px 10% 20px 10%;
-    background-color: #353853;
-    border: solid 5px #353853;
-    border-radius: 20px;
-    text-align: center;
-    color: white;
-    font-family: customFont;
-    
-}
-#registerButton:hover{
-    animation: regButtonGo_Go 0.5s ease forwards;
-    background-color: #b77dd4;
-    border: solid 5px #b77dd4;
-}
-
 /* Login Button */
 
 @keyframes logButtonGo_Go {
@@ -111,7 +73,7 @@ body{
         border: solid 5px #353853;
     }
 }
-#login button{
+.login button{
     animation: logButtonGo_Go_BACK 0.5s ease;
     width: 20%;
     height: 40px;
@@ -124,7 +86,7 @@ body{
     font-family: customFont;
     
 }
-#login button:hover{
+.login button:hover, .login button:focus{
     animation: logButtonGo_Go 0.5s ease forwards;
     background-color: #b77dd4;
     border: solid 5px #b77dd4;
@@ -135,4 +97,10 @@ input, button{
 }
 h1{
     font-size: 80px;
+}
+img{
+    image-rendering: pixelated;
+}
+input{
+    font-family: customFont;
 }
