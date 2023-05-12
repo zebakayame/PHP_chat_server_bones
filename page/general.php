@@ -30,7 +30,12 @@
             $message = $_POST["message"];
             $username = $_SESSION["username"];
             $sql = "INSERT INTO message VALUES ('$message' , '$username');";
-            mysqli_query($con, $sql);
+            if(mysqli_query($con, $sql)){
+                echo "message succesfully sended";
+            }else{
+                echo "Error while sending message";
+            }
+            exit();
         }
 
     ?>
