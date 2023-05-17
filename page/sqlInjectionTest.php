@@ -20,7 +20,7 @@
             if(mysqli_query($con, $sql)){
                 echo "message succesfully sended";
             }else{
-                echo "Error while sending message";
+                echo "Error: " . $sql . "<br>";
             }
             exit();
         }
