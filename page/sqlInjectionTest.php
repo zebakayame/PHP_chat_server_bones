@@ -14,9 +14,9 @@
         include("sqlConnection.php");
         
         if(isset($_POST['send'])){
-            $message = "HELLOO";
-            $username = "Kurio";
-            $sql = "INSERT INTO message VALUES ('$message' , '$username');";
+            $messages = "HELLOO";
+            $user = 1;
+            $sql = "INSERT INTO message (message, user_id) VALUES ('$messages', $user)";
             if(mysqli_query($con, $sql)){
                 echo "message succesfully sended";
             }else{

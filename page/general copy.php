@@ -10,7 +10,7 @@
     <script src="../js/sendingMessage.js"></script>
     <title>UwU</title>
 </head>
-<body onload="table()">
+<body>
     <?php
         include("sqlConnection.php");
         session_start();
@@ -27,11 +27,6 @@
         }
 
     ?>
-    <script>
-        function refresh(){
-            
-        }
-    </script>
     <div id="topHead">
         <div id="spacement">
             <img src="../img/catLogo.png" alt="logo" class="logo" title="Meow">
@@ -44,7 +39,7 @@
         </form>
     </div>
     <div class="chat">
-    <?php
+        <?php
             include("sqlConnection.php"); 
 
             // taking EVERYTHING from the base
@@ -77,7 +72,7 @@
         <div class="fixer">
         <form id="messager" method="post" action="">
             <input type="text" placeholder="Write some text" name="message" id="chatInput" autocomplete="off">
-            <button type="submit" id="sender" onclick="refresh()">Send</button>
+            <button type="submit" id="sender">Send</button>
         </form>
         </div>
     </div>

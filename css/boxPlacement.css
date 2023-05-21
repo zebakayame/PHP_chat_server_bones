@@ -1,5 +1,6 @@
 body{
     padding: 120px 0px 0px 0px;
+    max-height: 100vh;
 }
 #topHead{
     position: absolute;
@@ -37,8 +38,7 @@ body{
     background-color: #b77dd4;
 }
 
-#senderDiv{
-    display: felx;
+#senderDiv{ 
     text-align: left;
     position: absolute;
     bottom: 0px;
@@ -119,4 +119,9 @@ body{
     animation: senderButtonGo_Go 0.5s ease forwards;
     background-color: #b77dd4;
     border: solid 5px #b77dd4;
+}
+
+.chat{
+    height: 60vh;
+    overflow-y: auto;
 }
