@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/discussion.css">
     <link rel="icon" href="../img/catLogo.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/sendingMessage.js"></script>
     <title>UwU</title>
 </head>
@@ -37,6 +38,7 @@
             xhttp.open("GET", "fetch_messages.php", true);
             xhttp.send();
         }
+        
     </script>
     <div id="topHead">
         <div id="spacement">
@@ -54,34 +56,6 @@
     <div id="chat">
 
     </div>
-    <?php
-            /*include("sqlConnection.php"); 
-
-            // taking EVERYTHING from the base
-            $sql = "SELECT * FROM message";
-
-            // EL result
-            $result = mysqli_query($con, $sql);
-            
-            if (mysqli_num_rows($result) > 0) {
-                // El loop
-                while ($eachMess = mysqli_fetch_assoc($result)) {
-                    $sqlUserNameGetor = "SELECT USERS.name FROM USERS WHERE USERS.id = " . $eachMess['user_id'];
-                    $userNameResult = mysqli_query($con, $sqlUserNameGetor);
-                    $row = mysqli_fetch_assoc($userNameResult);
-                    $userName = $row["name"];
-                    echo 
-                        '<div class="message">
-                            <p>'. $userName .'</p>
-                            <p>'. $eachMess['message'] .'</p>
-                        </div><br>'
-                    ;
-                }
-
-            } else {
-                echo "No messages found.";
-            }*/
-        ?>
     </div>
     <div id="senderDiv">
         <div class="fixer">

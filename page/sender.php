@@ -10,8 +10,6 @@
         }else{
             echo "Error: " . $sql . "<br>";
         }
-        $delay = 5;
-        header("refresh:$delay;url=general.php");
         exit();
     }
 ?>

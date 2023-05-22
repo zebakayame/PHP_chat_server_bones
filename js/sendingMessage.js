@@ -4,7 +4,9 @@ $(document).ready(
         event.preventDefault();
         
         var data = document.getElementById("chatInput").value;
-        
+            
+        document.getElementById("chat").innerHTML = "called";
+
         var userId = parseInt(document.getElementById("user").textContent);
         $.ajax({
             url: '../page/sender.php',
