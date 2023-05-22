@@ -26,18 +26,17 @@
         }
 
     ?>
-    <script type="text/javascript">
-        function refresh(){
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange=function(){
-                if(this.readyState==4 && this.status==200){
-                    document.getElementsByClassName("chat").innerHTML=this.responseText;
+    <script>
+        function refresh() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("chat").innerHTML = this.responseText;
                 }
             };
-            xmlhttp.open("GET", "fetch_messages.php", true);
-            xmlhttp.send();
+            xhttp.open("GET", "fetch_messages.php", true);
+            xhttp.send();
         }
-        refresh();
     </script>
     <div id="topHead">
         <div id="spacement">
@@ -50,8 +49,11 @@
             <input type="submit" name="logout" value="logout" id="logout">
         </form>
     </div>
-    <form>
-    <div class="chat" onclick="refresh()">
+    <div class="chat">
+    <button onclick="refresh()">HELLO?</button>
+    <div id="chat">
+
+    </div>
     <?php
             /*include("sqlConnection.php"); 
 
@@ -81,7 +83,6 @@
             }*/
         ?>
     </div>
-    </form>
     <div id="senderDiv">
         <div class="fixer">
         <form id="messager" method="post" action="">
