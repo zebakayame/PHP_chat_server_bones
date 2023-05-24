@@ -28,7 +28,6 @@
 
     ?>
     <script>
-        
         function refresh() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
@@ -50,10 +49,11 @@
     </script>
     <div id="topHead">
         <div id="spacement">
-            <img src="../img/catLogo.png" alt="logo" class="logo" title="Meow">
             <?php
-                echo "<p id='user'>". $_SESSION['YOURid'] ."</p>";
+                echo "<img src=". $_SESSION['image_profile']." alt='logo' class='logo' title='Meow'>";
+                echo "<p>ID:".$_SESSION["username"]." #</p><p id='user'>". $_SESSION['YOURid'] ."</p>";
             ?>
+            <a href="settings.php">Settings</a>
         </div>
         <form method="post" action="">
             <input type="submit" name="logout" value="logout" id="logout">

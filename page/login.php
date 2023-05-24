@@ -12,11 +12,13 @@
         echo "<h1><center> Login successful </center></h1>";
         session_start();
         $_SESSION['username'] = $username;
-        $sqlIdGetor = "SELECT id FROM USERS WHERE USERS.name = '$username'";
+        $sqlIdGetor = "SELECT * FROM USERS WHERE USERS.name = '$username'";
         $IdResult = mysqli_query($con, $sqlIdGetor);
         $row = mysqli_fetch_assoc($IdResult);
         $user_id = $row["id"];
         $_SESSION['YOURid'] = $user_id;
+        $image = $row["image_profile"];
+        $_SESSION['image_profile'] = $image;
         header("Location: general.php");
     }else{
         header("Location: ../index.html");
