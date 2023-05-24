@@ -37,14 +37,17 @@
             };
             xhttp.open("GET", "fetch_messages.php", true);
             xhttp.send();
-            scroolChat();
         }
         function scroolChat(){
             var chat = document.querySelector('.chat');
-            chat.scrollTop = chat.scrollHeight;
+            // if condition pour anti scroll a l'infinie
+            if(chat.scrollTop==0 || chat.scrollTop > chat.scrollHeight - 800){
+                chat.scrollTop = chat.scrollHeight;
+            }
         }
         var loooper = setInterval(function(){
             refresh();
+            scroolChat();
         }, 500);
     </script>
     <div id="topHead">

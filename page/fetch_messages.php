@@ -20,9 +20,10 @@ include("sqlConnection.php");
                     $userImage = $rowI["image_profile"];
                     echo 
                         '<div class="message">
-                            <p><img src="'. $userImage .'" class="userImage">'. $userName .'
-                            <br>'. $eachMess['message'] .'</p>
-                        </div><hr>'
+                        <img src="'. $userImage .'" class="userImage"><p class="messageUserName">'. $userName .'</p>
+                        <p class="messages">'. $eachMess['message'] .'</p>
+                        </div>
+                        <hr>'
                     ;
                 }
 
