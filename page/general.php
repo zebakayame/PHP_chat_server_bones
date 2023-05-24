@@ -10,7 +10,7 @@
     <script src="../js/sendingMessage.js"></script>
     <title>UwU</title>
 </head>
-<body onload="refresh()">
+<body onload="setup()">
     <?php
         include("sqlConnection.php");
         session_start();
@@ -28,6 +28,7 @@
 
     ?>
     <script>
+        
         function refresh() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
@@ -37,8 +38,15 @@
             };
             xhttp.open("GET", "fetch_messages.php", true);
             xhttp.send();
+            scroolChat();
         }
-        
+        function scroolChat(){
+            var chat = document.querySelector('.chat');
+            chat.scrollTop = chat.scrollHeight;
+        }
+        var loooper = setInterval(function(){
+            refresh();
+        }, 500);
     </script>
     <div id="topHead">
         <div id="spacement">
@@ -52,7 +60,6 @@
         </form>
     </div>
     <div class="chat">
-    <button onclick="refresh()">HELLO?</button>
     <div id="chat">
 
     </div>
