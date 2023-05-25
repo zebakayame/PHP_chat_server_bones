@@ -26,6 +26,7 @@
     <h3>Profile picture: </h3>
     <?php echo "<img src=". $_SESSION['image_profile']." class='pp'>"?>
     <h4>Change Profile pictures:</h4>
+
     <form action="" method="POST" enctype="multipart/form-data">
          <input type="file" name="image" />
          <input type="submit"/>

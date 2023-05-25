@@ -171,15 +171,20 @@ button {
     border-color: var(--accent-color);
 }
 
-.message{
-    padding: 0px 20px 0px 20px;
-}
-.message p{
-    margin: 20px;
-}
+
 .userImage{
     width: 40px;
     image-rendering: pixelated;
     border-radius: 10px;
     margin: 0px 20px 0px 0px;
+    float: left;
+}
+.message{
+    margin: 0px 0px 0px 20px;
+}
+.messages{
+    margin: 0px 0px 0px 0px;
+}
+.messageUserName{
+    margin: 0px;
 }

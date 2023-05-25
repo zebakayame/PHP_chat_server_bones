@@ -41,9 +41,9 @@
         function scroolChat(){
             var chat = document.querySelector('.chat');
             // if condition pour anti scroll a l'infinie
-            if(chat.scrollTop==0 || chat.scrollTop > chat.scrollHeight - 800){
+            //if(chat.scrollTop==0 || chat.scrollTop > chat.scrollHeight - 800){
                 chat.scrollTop = chat.scrollHeight;
-            }
+            //}
         }
         var loooper = setInterval(function(){
             refresh();

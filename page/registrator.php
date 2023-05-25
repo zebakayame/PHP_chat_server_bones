@@ -5,8 +5,16 @@
     $username = $_POST["user"];
     $password = $_POST["pass"];
 
-    $sql = "INSERT INTO `users` (`name`, `pass`, `image_profile`) VALUES ('$username', '$password', '../img/pp/def.png')";
+    echo $username;
+    echo $password;
 
+    
+    $sql = "INSERT INTO USERS (name, pass, image_profile) VALUES ('$username', '$password', '../img/pp/def.png')";
+    
+    $ping = mysqli_ping($con);
+    echo $ping;
+    
+    
     //executor
     if(mysqli_query($con, $sql)){
         echo "Account creation successful";
@@ -14,5 +22,6 @@
     }else{
         echo "error";
     }
+    echo "test";
 
 ?>
