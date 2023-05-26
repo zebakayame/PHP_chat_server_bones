@@ -53,10 +53,13 @@
     <div id="topHead">
         <div id="spacement">
             <?php
-                echo "<img src=". $_SESSION['image_profile']." alt='logo' class='logo' title='Meow'>";
-                echo "<p>ID:".$_SESSION["username"]." #</p><p id='user'>". $_SESSION['YOURid'] ."</p>";
+                echo "<img src=". $_SESSION['image_profile']." alt='logo' class='logo' title='Meow'>";?>
+            <div class="info">
+                <?php
+                echo "<div class='userInfo'><p>ID:".$_SESSION["username"]." #</p><p id='user'>". $_SESSION['YOURid'] ."</p></div>";
             ?>
             <a href="settings.php">Settings</a>
+            </div>
         </div>
         <form method="post" action="">
             <input type="submit" name="logout" value="logout" id="logout">
@@ -69,9 +72,10 @@
     </div>
     <div id="senderDiv">
         <div class="fixer">
-        <form id="messager" method="post" action="">
+        <form id="messager" method="post" action="" enctype="multipart/form-data">
+            <input type="file" name="image"/>
             <input type="text" placeholder="Write some text" name="message" id="chatInput" autocomplete="off">
-            <button type="submit" id="sender" onclick="refresh()">Send</button>
+            <button type="submit" id="sender">Send</button>
         </form>
         </div>
     </div>

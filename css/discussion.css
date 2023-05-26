@@ -187,4 +187,17 @@ button {
 }
 .messageUserName{
     margin: 0px;
+    color: var(--wsec);
 }
+
+.info{
+    display: block;
+    margin: 3vh 0px 3vh 0px;
+}
+.userInfo {
+    display: flex;
+}
+
+a:visited {
+    color: var(--accent-color);
+  }
