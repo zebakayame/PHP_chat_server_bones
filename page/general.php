@@ -67,13 +67,12 @@
     </div>
     <div class="chat">
     <div id="chat">
-
+        
     </div>
     </div>
     <div id="senderDiv">
         <div class="fixer">
-        <form id="messager" method="post" action="" enctype="multipart/form-data">
-            <input type="file" name="image"/>
+        <form id="messager" method="post" action="">
             <input type="text" placeholder="Write some text" name="message" id="chatInput" autocomplete="off">
             <button type="submit" id="sender">Send</button>
         </form>

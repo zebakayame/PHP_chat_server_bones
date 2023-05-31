@@ -10,17 +10,30 @@ include("sqlConnection.php");
             if (mysqli_num_rows($result) > 0) {
                 // El loop
                 while ($eachMess = mysqli_fetch_assoc($result)) {
-                    $sqlUserNameGetor = "SELECT USERS.name FROM USERS WHERE USERS.id = " . $eachMess['user_id'];
-                    $sqlImageUserGetor = "SELECT USERS.image_profile FROM USERS WHERE USERS.id = " . $eachMess['user_id'];
-                    $userNameResult = mysqli_query($con, $sqlUserNameGetor);
-                    $userImageResult = mysqli_query($con, $sqlImageUserGetor);
-                    $rowN = mysqli_fetch_assoc($userNameResult);
-                    $rowI = mysqli_fetch_assoc($userImageResult);
-                    $userName = $rowN["name"];
-                    $userImage = $rowI["image_profile"];
+                    $sqlGetor = "SELECT * FROM USERS WHERE USERS.id = " . $eachMess['user_id'];
+                    $userResult = mysqli_query($con, $sqlGetor);
+                    $row = mysqli_fetch_assoc($userResult);
+                    $userName = $row["name"];
+                    $userImage = $row["image_profile"];
+                    $userRole = $row["role"];
+
+                    if($userRole == "KING"){
+                        $color = "RED";
+                        $role = " [KING]";
+                    }else if($userRole == "Queen"){
+                        $color = "purple";
+                        $role = " [QUEEN]";
+                    }else if($userRole == "MODO"){
+                        $color = "cyan";
+                        $role = " [MODERATOR]";
+                    }else{
+                        $color = "white";
+                        $role = "";
+                    }
                     echo 
                         '<div class="message">
-                        <img src="'. $userImage .'" class="userImage"><p class="messageUserName">'. $userName .'#' .$eachMess['user_id']. '</p>
+                        <img src="'. $userImage .'" class="userImage"><p class="messageUserName" title="'. $userRole .'" style="color: '. $color .';">'
+                        . $userName .'#' .$eachMess['user_id']. ' '. $role .'</p>
                         <p class="messages">'. $eachMess['message'] .'</p>
                         </div>
                         <hr>'
