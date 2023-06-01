@@ -14,9 +14,8 @@
 
         $sql = "Select * FROM USERS";
         $result = mysqli_query($con, $sql);
-
-        echo $result;
-
+        $row = mysqli_fetch_assoc($result);
+        
     ?>
 </body>
 </html>
