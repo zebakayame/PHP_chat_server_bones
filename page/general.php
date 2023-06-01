@@ -41,9 +41,9 @@
         function scroolChat(){
             var chat = document.querySelector('.chat');
             // if condition pour anti scroll a l'infinie
-            //if(chat.scrollTop==0 || chat.scrollTop > chat.scrollHeight - 800){
+            if(chat.scrollTop==0 || chat.scrollTop>chat.scrollHeight-800){
                 chat.scrollTop = chat.scrollHeight;
-            //}
+            }
         }
         var loooper = setInterval(function(){
             refresh();
@@ -58,7 +58,10 @@
                 <?php
                 echo "<div class='userInfo'><p>ID:".$_SESSION["username"]." #</p><p id='user'>". $_SESSION['YOURid'] ."</p></div>";
             ?>
-            <a href="settings.php">Settings</a>
+            <a href="settings.php">Settings / change profile pictures</a>
+            <?php if($_SESSION['role'] == "MODO" || $_SESSION['role'] == "KING" || $_SESSION['role'] == "Queen"){
+                echo '<a href="onlyAdmin.php" class="leftOutLink">Danger ZONE</a>';
+            }?>
             </div>
         </div>
         <form method="post" action="">

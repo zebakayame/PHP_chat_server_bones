@@ -197,6 +197,10 @@ button {
 .userInfo {
     display: flex;
 }
+.userInfo p, .userInfo a{
+    margin: 2px;
+}
+
 
 a:visited {
     color: var(--accent-color);

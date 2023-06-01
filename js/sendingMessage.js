@@ -4,7 +4,17 @@ $(document).ready(
         event.preventDefault();
         
         var data = document.getElementById("chatInput").value;
-            
+        
+        if(data.length == ""){
+            alert("You cannot sending empty message");
+        }
+        else{
+        
+        // illegal characters check comme celui ci: '
+        if(data.includes("'")){
+            data = data.replace("'","''");
+        }
+        
         document.getElementById("chat").innerHTML = "called";
 
         var userId = parseInt(document.getElementById("user").textContent);
@@ -23,7 +33,8 @@ $(document).ready(
             }
         });
         document.getElementById("chatInput").value = "";
-        });
+        }
+    });
     }
 );
 

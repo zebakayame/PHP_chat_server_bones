@@ -28,7 +28,7 @@ include("sqlConnection.php");
                         $role = " [MODERATOR]";
                     }else{
                         $color = "white";
-                        $role = "";
+                        $role = "[rookie]";
                     }
                     echo 
                         '<div class="message">

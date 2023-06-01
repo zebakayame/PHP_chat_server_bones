@@ -19,6 +19,8 @@
         $_SESSION['YOURid'] = $user_id;
         $image = $row["image_profile"];
         $_SESSION['image_profile'] = $image;
+        $role = $row['role'];
+        $_SESSION['role'] = $role;
         header("Location: general.php");
     }else{
         header("Location: ../index.html");
