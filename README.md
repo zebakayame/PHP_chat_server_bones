@@ -1,41 +1,19 @@
-# newG
+# PHP CHAT SERVER BONES
 
-Depsite his absolute not original name, i mean come on
+The bones of the bones with a sweet little bit of tendons and single string muscle with the css and bla bla
 
-NewG? what does that even mean? Well to put it short it's just me writing at full speed making some error on the way 
+Anyway, this shit is just some kind of template things that function with php, sql and so on
 
-I wanted to type newF but the G key was next to F so yeah you guessed it
+This project is shit, it ask the entire sql message table every 500ms meaning it take a lot of request in the server side
 
-Basically this is a Forum
+Need to be improved but idc about it
 
-Or more a chat
+Feel free to do whatever u want with it, not that this shit can take you in a long run...
 
-or the what the hell i do not know the hell this is called
+The only thing u are not free to use as you want is:
 
-BASSICALLY: it's a single chat where everybody connected to it can chit chat toghther
+All the assets (image). That's not yours
 
-This project is just the bones of bones of a chat system like discord
+And the Website design. I designed the look of the website so please design it on your own way and don't copy me, that's mine grrrr
 
-The bones with some tendons but nothing more
-
-Use that shit as you please i don't care
-
-This shit has also no security on it
-
-
-And lastly, Ajax spam the server with request of the freaking ENTIRE MESSAGE sql Table every 500ms
-
-This project was born as an assignement that i had to do
-
-The assignement was that: make a project with php and sql, you can do whatever you want
-
-Why do i even write the description in the first place if this is a dead project?
-
-Whatever. I got the full mark with this real SHIT UwU
-
-
-Ok peace now
-
-
-Here's a potato: 🥔
-UwU
+Anyway, UwU
